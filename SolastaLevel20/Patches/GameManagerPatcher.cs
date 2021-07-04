@@ -21,12 +21,12 @@ namespace SolastaLevel20.Patches
             {
                 FixExperienceTable();
 
-                ClericBuilder.Load();
-                FighterBuilder.Load();
-                PaladinBuilder.Load();
-                RangerBuilder.Load();
-                RogueBuilder.Load();
-                WizardBuilder.Load();
+                if (Main.Settings.enableClericProgression) ClericBuilder.Load();
+                if (Main.Settings.enableFighterProgression) FighterBuilder.Load();
+                if (Main.Settings.enablePaladinProgression) PaladinBuilder.Load();
+                if (Main.Settings.enableRangerProgression) RangerBuilder.Load();
+                if (Main.Settings.enableRogueProgression) RogueBuilder.Load();
+                if (Main.Settings.enableWizardProgression) WizardBuilder.Load();
             }
         }
     }

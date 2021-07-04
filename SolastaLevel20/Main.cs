@@ -19,6 +19,13 @@ namespace SolastaLevel20
         public const int MOD_MAX_LEVEL = 20;
         public const int GAME_MAX_LEVEL = 10;
         public const int MAX_CHARACTER_EXPERIENCE = 1000000;
+
+        public bool enableClericProgression = true;
+        public bool enableFighterProgression = true;
+        public bool enablePaladinProgression = true;
+        public bool enableRangerProgression = true;
+        public bool enableRogueProgression = true;
+        public bool enableWizardProgression = true;
     }
 
     public class Main
@@ -89,8 +96,8 @@ namespace SolastaLevel20
 
                 Mod = new ModManager<Core, Settings>();
                 Mod.Enable(modEntry, assembly);
-                //Menu = new MenuManager();
-                //Menu.Enable(modEntry, assembly);
+                Menu = new MenuManager();
+                Menu.Enable(modEntry, assembly);
             }
             catch (Exception ex)
             {
