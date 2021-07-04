@@ -16,7 +16,7 @@ namespace SolastaLevel20.Viewers
             UI.Label("Welcome to Level 20".yellow().bold());
             UI.Div();
 
-            UI.Label("Enables / Disables adding missing features to game official classes above level 10:");
+            UI.Label("Enables / Disables official classes progression above level 10:");
 
             toggle = Main.Settings.enableClericProgression;
             if (UI.Toggle("Cleric", ref toggle, 0, UI.AutoWidth())) 
