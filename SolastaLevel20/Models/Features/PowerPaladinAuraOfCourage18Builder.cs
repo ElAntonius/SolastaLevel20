@@ -23,8 +23,8 @@ namespace SolastaLevel20.Models.Features
             Definition.SetOverriddenPower(PowerPaladinAuraOfCourage);
 
             // TODO: localize
-            Definition.GuiPresentation.Description = "Grant a saving throw bonus to allies withing 30ft.";
-            Definition.GuiPresentation.Title = "Improved Aura of Courage";
+            Definition.GuiPresentation.Description = "Feature/&PowerPaladinAuraOfCourage18Description";
+            Definition.GuiPresentation.Title = "Feature/&PowerPaladinAuraOfCourage18Title";
         }
 
         public static FeatureDefinitionPower Instance

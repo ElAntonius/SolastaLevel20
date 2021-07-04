@@ -23,8 +23,8 @@ namespace SolastaLevel20.Models.Features
             Definition.SetOverriddenPower(PowerPaladinAuraOfProtection);
 
             // TODO: localize
-            Definition.GuiPresentation.Description = "You and your allies within 30ft cannot be frightened.";
-            Definition.GuiPresentation.Title = "Improved Aura of Protection";
+            Definition.GuiPresentation.Description = "Feature/&PowerPaladinAuraOfProtection18Description";
+            Definition.GuiPresentation.Title = "Feature/&PowerPaladinAuraOfProtection18Title";
         }
 
         public static FeatureDefinitionPower Instance
