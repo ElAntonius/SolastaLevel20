@@ -116,6 +116,8 @@ namespace SolastaLevel20.Viewers
             UI.Label(". unlocks game progression to level 20");
             UI.Label(". adds missing SRD features to game official classes as below");
             UI.Label(". supports Barbarian, Bard, Monk, Tinkerer and many other unofficial modded classes and subclasses");
+
+            UI.Label("");
             UI.Label("Current Limitations:".yellow());
             UI.Label(". no additional features added to subclasses progression");
             UI.Label(". some class progression features still" + PLANNED + "as below");
