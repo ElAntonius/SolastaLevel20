@@ -4,8 +4,6 @@ Attempt to bring all Solasta official heroes classes to level 20.
 
 ## Classes:
 	- Cleric (caster level 6)
-		. 11: Turn Undead (CR 2)
-		. 12: Ability Score Increase or Feat Choice
 		. 14: Turn Undead (CR 3)
 		. 16: Ability Score Increase or Feat Choice
 		. 17: Turn Undead (CR 4)
@@ -15,8 +13,6 @@ Attempt to bring all Solasta official heroes classes to level 20.
 		. 20: Divine Intervention Improvement [PLANNED]
 
 	- Fighter
-		. 11: Extra Attack (2)
-		. 12: Ability Score Increase or Feat Choice
 		. 13: Indomitable (2)
 		. 14: Ability Score Increase or Feat Choice
 		. 15: Martial Archetype Feature [PLANNED]
@@ -27,8 +23,6 @@ Attempt to bring all Solasta official heroes classes to level 20.
 		. 20: Extra Attack (3)
 
 	- Paladin (caster level 5)
-		. 11: Improved Divine Smite
-		. 12: Ability Score Increase or Feat Choice
 		. 14: Cleasing Touch [PLANNED]
 		. 15: Sacred Oath Feature [PLANNED]
 		. 16: Ability Score Increase or Feat Choice
@@ -37,8 +31,6 @@ Attempt to bring all Solasta official heroes classes to level 20.
 		. 20: Sacred Oath Feature [PLANNED]
 
 	- Ranger (caster level 5)
-		. 11: Ranger Archetype Feature [PLANNED]
-		. 12: Ability Score Increase or Feat Choice
 		. 14: Favored Enemy Choice (2), Vanish
 		. 15: Ranger Archetype Feature [PLANNED]
 		. 16: Ability Score Increase or Feat Choice
@@ -47,9 +39,6 @@ Attempt to bring all Solasta official heroes classes to level 20.
 		. 20: Foe Slayer [PLANNED]
 
 	- Rogue
-		. 10: Ability Score Increase or Feat Choice
-		. 11: Reliable Talent
-		. 12: Ability Score Increase or Feat Choice
 		. 13: Roguish Archetype Feature [PLANNED]
 		. 14: Blindsense
 		. 15: Slippery Minds
@@ -60,26 +49,11 @@ Attempt to bring all Solasta official heroes classes to level 20.
 		. 20: Stroke of Luck [PLANNED]
 
 	- Wizard (caster level 6)
-		. 12: Ability Score Increase or Feat Choice
 		. 14: Overchannel [PLANNED]
 		. 16: Ability Score Increase or Feat Choice
 		. 18: Spell Mastery [PLANNED]
 		. 19: Ability Score Increase or Feat Choice
 		. 20: Signature Spells [PLANNED]
-
-## Spells:
-
-	- Paladin:
-		. 04: Banishement
-		. 04: Death Ward
-
-		. 05: Dispel Evil and Good
-		. 05: Raise Dead
-
-	- Ranger:
-		. 04: Conjure Elemental
-		. 04: Freedom of Movement
-		. 04: Stoneskin
 
 ## Features:
 
