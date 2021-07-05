@@ -1,17 +1,12 @@
-Feedback/&AdditionalDamageImprovedDivineSmiteLine	{0} improved smites {1} (+{2})
 Feature/&RangerVanishActionTitle	Vanish
 Feature/&RangerVanishActionDescription	Starting at 14th level, you can use the Hide action as a bonus action on your turn.
 Feature/&AttributeModifierFighterIndomitable2Title	Indomitable (2)
 Feature/&AttributeModifierFighterIndomitable3Title	Indomitable (3)
-Feature/&PaladinImprovedDivineSmiteTitle	Improved Divine Smite
-Feature/&PaladinImprovedDivineSmiteDescription	By 11th level, you are so focused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage.
-Feature/&ProficiencyRogueSlipperyMindTitle	Slippery Mind
-Feature/&ProficiencyRogueSlipperyMindDescription	By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.
-Feature/&ProficiencyRogueBlindSenseTitle	Blindsense
-Feature/&ProficiencyRogueBlindSenseDescription	Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.
-Feature/&FeatureRogueReliableTalentTitle   Reliable talent
-Feature/&FeatureRogueReliableTalentDescription   You treat a roll of less than 10 as 10 for any ability at which you are proficient.
 Feature/&PowerPaladinAuraOfProtection18Title	Improved Aura of Protection
 Feature/&PowerPaladinAuraOfProtection18Description	You and your allies within 30ft cannot be frightened.
 Feature/&PowerPaladinAuraOfCourage18Title	Improved Aura of Courage
 Feature/&PowerPaladinAuraOfCourage18Description Grant a saving throw bonus to allies withing 30ft.
+Feature/&ProficiencyRogueSlipperyMindTitle	Slippery Mind
+Feature/&ProficiencyRogueSlipperyMindDescription	By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.
+Feature/&ProficiencyRogueBlindSenseTitle	Blindsense
+Feature/&ProficiencyRogueBlindSenseDescription	Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.

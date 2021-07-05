@@ -8,7 +8,6 @@ using static SolastaModApi.DatabaseHelper.SpellDefinitions;
 using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 using static SolastaModApi.Extensions.SpellListDefinitionExtensions;
 using static SolastaModApi.Extensions.FeatureDefinitionCastSpellExtensions;
-using static SolastaLevel20.Models.Features.AdditionalDamagePaladinImprovedDivineSmiteBuilder;
 
 namespace SolastaLevel20.Models.Classes
 {
@@ -42,8 +41,6 @@ namespace SolastaLevel20.Models.Classes
         {
             // add missing progression
             Paladin.FeatureUnlocks.AddRange(
-                new FeatureUnlockByLevel(AdditionalDamagePaladinImprovedDivineSmite, 11),
-                new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 12),
                 // TODO 14: Cleansing Touch
                 // TODO 15: Sacred Oath Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
@@ -70,18 +67,6 @@ namespace SolastaLevel20.Models.Classes
                 {
                     Banishment,
                     DeathWard
-                }
-            });
-
-            // add missing 5th level spells
-            SpellListPaladin.SpellsByLevel.RemoveAll(x => x.Level == 5);
-            SpellListPaladin.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet
-            {
-                Level = 5,
-                Spells = new List<SpellDefinition>
-                {
-                    RaiseDead,
-                    DispelEvilAndGood
                 }
             });
         }

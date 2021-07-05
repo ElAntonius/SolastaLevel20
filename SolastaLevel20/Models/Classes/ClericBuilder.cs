@@ -3,7 +3,6 @@ using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionAttributeModifiers;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
-// using static SolastaModApi.DatabaseHelper.SpellDefinitions;
 using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 using static SolastaModApi.Extensions.SpellListDefinitionExtensions;
 using static SolastaModApi.Extensions.FeatureDefinitionCastSpellExtensions;
@@ -41,8 +40,6 @@ namespace SolastaLevel20.Models.Classes
         {
             // add missing progression
             Cleric.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
-                new FeatureUnlockByLevel(PowerClericTurnUndead11, 11),
-                new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 12),
                 new FeatureUnlockByLevel(PowerClericTurnUndead14, 14),
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 new FeatureUnlockByLevel(PowerClericTurnUndead17, 17),

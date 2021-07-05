@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
-using static SolastaModApi.DatabaseHelper.FeatureDefinitionAttributeModifiers;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
-// using static SolastaModApi.DatabaseHelper.SpellDefinitions;
 using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 using static SolastaModApi.Extensions.FeatureDefinitionCastSpellExtensions;
 using static SolastaModApi.Extensions.SpellListDefinitionExtensions;
@@ -40,7 +38,6 @@ namespace SolastaLevel20.Models.Classes
         {
             // add missing progression
             Wizard.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
-                new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 12),
                 // TODO 14: Overchannel
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 // TODO 18: Spell Mastery

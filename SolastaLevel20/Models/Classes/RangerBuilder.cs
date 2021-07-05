@@ -40,8 +40,6 @@ namespace SolastaLevel20.Models.Classes
         {
             // add missing progression
             Ranger.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
-                // TODO 11: Ranger Archetype Feature
-                new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 12),
                 new FeatureUnlockByLevel(AdditionalDamageRangerFavoredEnemyChoice, 14),
                 new FeatureUnlockByLevel(ActionAffinityRangerVanishAction, 14),
                 // TODO 15: Ranger Archetype Feature

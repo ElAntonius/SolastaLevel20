@@ -8,7 +8,7 @@ namespace SolastaLevel20.Models.Features
     {
         private static FeatureDefinitionPower _instance;
 
-        const string PowerPaladinAuraOfCourage18Name = "Level20_PowerPaladinAuraOfCourage18";
+        const string PowerPaladinAuraOfCourage18Name = "ZSPowerPaladinAuraOfCourage18";
         const string PowerPaladinAuraOfCourage18Guid = "d68c46024ea8432b981506a13ae35ecd";
 
         public PowerPaladinAuraOfCourage18Builder() : base(PowerPaladinAuraOfCourage, PowerPaladinAuraOfCourage18Name, PowerPaladinAuraOfCourage18Guid)

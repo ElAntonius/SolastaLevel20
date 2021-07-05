@@ -6,7 +6,7 @@ namespace SolastaLevel20.Models.Features
 {
     internal class ActionAffinityRangerVanishActionBuilder : BaseDefinitionBuilder<FeatureDefinitionActionAffinity>
     {
-        const string ActionAffinityRangerVanishActionName = "AdditionalActionVanish";
+        const string ActionAffinityRangerVanishActionName = "ZSAdditionalActionVanish";
         const string ActionAffinityRangerVanishActionGuid = "83711ec64d8c47bfa91053a00a1d0a83";
 
         protected ActionAffinityRangerVanishActionBuilder(string name, string guid) : base(ActionAffinityRogueCunningAction, name, guid)
