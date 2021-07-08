@@ -13,7 +13,7 @@ namespace SolastaLevel20.Patches
             internal static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
                 var code = new List<CodeInstruction>(instructions);
-                code.Find(x => x.opcode.Name == "ldc.i4.s" && Convert.ToInt32(x.operand) == GAME_MAX_LEVEL).operand = MOD_MAX_LEVEL;
+                code.Find(x => x.opcode.Name == "ldc.i4.s" && Convert.ToInt32(x.operand) == 10).operand = MOD_MAX_LEVEL; // using a hard-coded 10 here until TA changes to 13
                 return code;
             }
         }

@@ -6,10 +6,10 @@ namespace SolastaLevel20.Models.Features
 {
     internal class AttributeModifierFighterIndomitableBuilder : BaseDefinitionBuilder<FeatureDefinitionAttributeModifier>
     {
-        const string AttributeModifierFighterIndomitable2Name = "AttributeModifierFighterIndomitable2";
+        const string AttributeModifierFighterIndomitable2Name = "ZSAttributeModifierFighterIndomitable2";
         const string AttributeModifierFighterIndomitable2Guid = "8a2f09cafd7b47d886cb0ce098c4f477";
 
-        const string AttributeModifierFighterIndomitable3Name = "AttributeModifierFighterIndomitable3";
+        const string AttributeModifierFighterIndomitable3Name = "ZSAttributeModifierFighterIndomitable3";
         const string AttributeModifierFighterIndomitable3Guid = "5c10d0830a84440d9bea436da7a9e75b";
 
         protected AttributeModifierFighterIndomitableBuilder(string name, string guid, int modifierValue) : base(AttributeModifierFighterIndomitable, name, guid)
