@@ -21,8 +21,6 @@ namespace SolastaLevel20.Models.Features
             ed.SetRequiresTargetProximity(false);
 
             Definition.SetOverriddenPower(PowerPaladinAuraOfProtection);
-
-            // TODO: localize
             Definition.GuiPresentation.Description = "Feature/&PowerPaladinAuraOfProtection18Description";
             Definition.GuiPresentation.Title = "Feature/&PowerPaladinAuraOfProtection18Title";
         }
