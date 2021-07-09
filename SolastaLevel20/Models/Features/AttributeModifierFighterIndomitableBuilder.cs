@@ -6,26 +6,20 @@ namespace SolastaLevel20.Models.Features
 {
     internal class AttributeModifierFighterIndomitableBuilder : BaseDefinitionBuilder<FeatureDefinitionAttributeModifier>
     {
-        const string AttributeModifierFighterIndomitable2Name = "ZSAttributeModifierFighterIndomitable2";
-        const string AttributeModifierFighterIndomitable2Guid = "8a2f09cafd7b47d886cb0ce098c4f477";
+        const string AttributeModifierFighterIndomitableAddName = "ZSAttributeModifierFighterIndomitableAdd";
+        const string AttributeModifierFighterIndomitableAddGuid = "8a2f09cafd7b47d886cb0ce098c4f477";
 
-        const string AttributeModifierFighterIndomitable3Name = "ZSAttributeModifierFighterIndomitable3";
-        const string AttributeModifierFighterIndomitable3Guid = "5c10d0830a84440d9bea436da7a9e75b";
-
-        protected AttributeModifierFighterIndomitableBuilder(string name, string guid, int modifierValue) : base(AttributeModifierFighterIndomitable, name, guid)
+        protected AttributeModifierFighterIndomitableBuilder(string name, string guid) : base(AttributeModifierFighterIndomitable, name, guid)
         {
-            Definition.GuiPresentation.Title = $"Feature/&AttributeModifierFighterIndomitable{modifierValue}Title";
-
-            Definition.SetModifierValue(modifierValue);
+            Definition.GuiPresentation.Title = "Feature/&IndomitableResistanceAddTitle";
+            Definition.GuiPresentation.Description = "Feature/&IndomitableResistanceAddDescription";
+            Definition.SetModifierType2(FeatureDefinitionAttributeModifier.AttributeModifierOperation.Additive);
         }
 
-        private static FeatureDefinitionAttributeModifier CreateAndAddToDB(string name, string guid, int modifierValue)
-            => new AttributeModifierFighterIndomitableBuilder(name, guid, modifierValue).AddToDB();
+        private static FeatureDefinitionAttributeModifier CreateAndAddToDB(string name, string guid)
+            => new AttributeModifierFighterIndomitableBuilder(name, guid).AddToDB();
 
-        public static readonly FeatureDefinitionAttributeModifier AttributeModifierFighterIndomitable2 = 
-            CreateAndAddToDB(AttributeModifierFighterIndomitable2Name, AttributeModifierFighterIndomitable2Guid, 2);
-
-        public static readonly FeatureDefinitionAttributeModifier AttributeModifierFighterIndomitable3 =
-            CreateAndAddToDB(AttributeModifierFighterIndomitable3Name, AttributeModifierFighterIndomitable3Guid, 3);
+        public static readonly FeatureDefinitionAttributeModifier AttributeModifierFighterIndomitableAdd = 
+            CreateAndAddToDB(AttributeModifierFighterIndomitableAddName, AttributeModifierFighterIndomitableAddGuid);
     }
 }

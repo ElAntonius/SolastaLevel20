@@ -12,12 +12,12 @@ namespace SolastaLevel20.Models.Classes
         public static void Load()
         {
             var features = new List<FeatureUnlockByLevel> {
-                new FeatureUnlockByLevel(AttributeModifierFighterIndomitable2, 13),
+                new FeatureUnlockByLevel(AttributeModifierFighterIndomitableAdd, 13),
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 14),
                 // TODO 15: Martial Archetype Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 new FeatureUnlockByLevel(PowerFighterActionSurge, 17),
-                new FeatureUnlockByLevel(AttributeModifierFighterIndomitable3, 17),
+                new FeatureUnlockByLevel(AttributeModifierFighterIndomitableAdd, 17),
                 // TODO 18: Martial Archetype Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19),
                 new FeatureUnlockByLevel(AttributeModifierFighterExtraAttack, 20)

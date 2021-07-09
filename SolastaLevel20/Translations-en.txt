@@ -1,7 +1,5 @@
 Feature/&RangerVanishActionTitle	Vanish
 Feature/&RangerVanishActionDescription	Starting at 14th level, you can use the Hide action as a bonus action on your turn.
-Feature/&AttributeModifierFighterIndomitable2Title	Indomitable (2)
-Feature/&AttributeModifierFighterIndomitable3Title	Indomitable (3)
 Feature/&PowerPaladinAuraOfProtection18Title	Improved Aura of Protection
 Feature/&PowerPaladinAuraOfProtection18Description	You and your allies within 30ft cannot be frightened.
 Feature/&PowerPaladinAuraOfCourage18Title	Improved Aura of Courage
@@ -10,3 +8,6 @@ Feature/&ProficiencyRogueSlipperyMindTitle	Slippery Mind
 Feature/&ProficiencyRogueSlipperyMindDescription	By 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.
 Feature/&ProficiencyRogueBlindSenseTitle	Blindsense
 Feature/&ProficiencyRogueBlindSenseDescription	Starting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.
+Feature/&IndomitableResistanceAddTitle	Text	Indomitable Resistance (increased)
+Feature/&IndomitableResistanceAddDescription	Text	+1 Indomitable Resistance use between rests.
+Feature/&IndomitableResistanceTitle	Text	Indomitable Resitance
