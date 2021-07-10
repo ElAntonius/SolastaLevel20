@@ -22,11 +22,12 @@ namespace SolastaLevel20.Models.Classes
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19)
                 // TODO 20: Stroke of Luck
             });
+
             // In case TA adds levels 11-20 later on, clear them out. If that happens we can delete this section.
-            DatabaseHelper.FeatureDefinitionAdditionalDamages.AdditionalDamageRogueSneakAttack.DiceByRankTable.RemoveAll(x => x.Rank > 12);
+            DatabaseHelper.FeatureDefinitionAdditionalDamages.AdditionalDamageRogueSneakAttack.DiceByRankTable.RemoveAll(x => x.Rank > 10);
             DatabaseHelper.FeatureDefinitionAdditionalDamages.AdditionalDamageRogueSneakAttack.DiceByRankTable.AddRange(new List<DiceByRank>() {
-                //BuildDiceByRank(11, 6),
-                //BuildDiceByRank(12, 6),
+                BuildDiceByRank(11, 6),
+                BuildDiceByRank(12, 6),
                 BuildDiceByRank(13, 7),
                 BuildDiceByRank(14, 7),
                 BuildDiceByRank(15, 8),

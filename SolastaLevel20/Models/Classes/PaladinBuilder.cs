@@ -2,44 +2,16 @@
 using SolastaModApi.Infrastructure;
 using SolastaLevel20.Models.Features;
 using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
-using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
 using static SolastaModApi.DatabaseHelper.SpellDefinitions;
 using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
-using static SolastaModApi.Extensions.SpellListDefinitionExtensions;
-using static SolastaModApi.Extensions.FeatureDefinitionCastSpellExtensions;
 
 namespace SolastaLevel20.Models.Classes
 {
     public static class PaladinBuilder
     {
-        //private static readonly List<List<int>> Slots = new List<List<int>>
-        //{
-        //    new List<int> {0,0,0,0,0},
-        //    new List<int> {2,0,0,0,0},
-        //    new List<int> {3,0,0,0,0},
-        //    new List<int> {3,0,0,0,0},
-        //    new List<int> {4,2,0,0,0},
-        //    new List<int> {4,2,0,0,0},
-        //    new List<int> {4,3,0,0,0},
-        //    new List<int> {4,3,0,0,0},
-        //    new List<int> {4,3,2,0,0},
-        //    new List<int> {4,3,2,0,0},
-        //    new List<int> {4,3,3,0,0},
-        //    new List<int> {4,3,3,0,0},
-        //    new List<int> {4,3,3,1,0},
-        //    new List<int> {4,3,3,1,0},
-        //    new List<int> {4,3,3,2,0},
-        //    new List<int> {4,3,3,2,0},
-        //    new List<int> {4,3,3,3,1},
-        //    new List<int> {4,3,3,3,1},
-        //    new List<int> {4,3,3,3,2},
-        //    new List<int> {4,3,3,3,2},
-        //};
-
         public static void Load()
         {
-            // add missing progression
             Paladin.FeatureUnlocks.AddRange(
                 // TODO 14: Cleansing Touch
                 // TODO 15: Sacred Oath Feature
@@ -50,15 +22,7 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Sacred Oath Feature
             );
 
-            //// add missing spell slots
-            //foreach (var slot in CastSpellPaladin.SlotsPerLevels)
-            //{
-            //    slot.Slots = Slots[slot.Level - 1];
-            //}
-            //CastSpellPaladin.SetSpellCastingLevel(Slots.Count);
-            //SpellListPaladin.SetMaxSpellLevel(SpellListPaladin.SpellsByLevel.Count);
-
-            // add missing 4th level spells
+            // recreate 4th level spells
             SpellListPaladin.SpellsByLevel.RemoveAll(x => x.Level == 4);
             SpellListPaladin.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet
             {

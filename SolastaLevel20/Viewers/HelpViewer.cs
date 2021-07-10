@@ -103,7 +103,7 @@ namespace SolastaLevel20.Viewers
                 UI.Label("Sorcerer".green());
                 UI.Label("12 - Ability score or feat");
                 UI.Label("16 - Ability score or feat");
-                UI.Label("17 - Metamagic" + PLANNED);
+                UI.Label("17 - Metamagic");
                 UI.Label("19 - Ability score or feat");
                 UI.Label("20 - Sorcerous Restoration" + PLANNED);
             }
