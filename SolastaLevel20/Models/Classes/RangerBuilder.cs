@@ -12,29 +12,29 @@ namespace SolastaLevel20.Models.Classes
 {
     public static class RangerBuilder
     {
-        private static readonly List<List<int>> Slots = new List<List<int>>
-        {
-            new List<int> {0,0,0,0},
-            new List<int> {2,0,0,0},
-            new List<int> {3,0,0,0},
-            new List<int> {3,0,0,0},
-            new List<int> {4,2,0,0},
-            new List<int> {4,2,0,0},
-            new List<int> {4,3,0,0},
-            new List<int> {4,3,0,0},
-            new List<int> {4,3,2,0},
-            new List<int> {4,3,2,0},
-            new List<int> {4,3,3,0},
-            new List<int> {4,3,3,0},
-            new List<int> {4,3,3,1},
-            new List<int> {4,3,3,1},
-            new List<int> {4,3,3,2},
-            new List<int> {4,3,3,2},
-            new List<int> {4,3,3,3},
-            new List<int> {4,3,3,3},
-            new List<int> {4,3,3,3},
-            new List<int> {4,3,3,3},
-        };
+        //private static readonly List<List<int>> Slots = new List<List<int>>
+        //{
+        //    new List<int> {0,0,0,0},
+        //    new List<int> {2,0,0,0},
+        //    new List<int> {3,0,0,0},
+        //    new List<int> {3,0,0,0},
+        //    new List<int> {4,2,0,0},
+        //    new List<int> {4,2,0,0},
+        //    new List<int> {4,3,0,0},
+        //    new List<int> {4,3,0,0},
+        //    new List<int> {4,3,2,0},
+        //    new List<int> {4,3,2,0},
+        //    new List<int> {4,3,3,0},
+        //    new List<int> {4,3,3,0},
+        //    new List<int> {4,3,3,1},
+        //    new List<int> {4,3,3,1},
+        //    new List<int> {4,3,3,2},
+        //    new List<int> {4,3,3,2},
+        //    new List<int> {4,3,3,3},
+        //    new List<int> {4,3,3,3},
+        //    new List<int> {4,3,3,3},
+        //    new List<int> {4,3,3,3},
+        //};
 
         public static void Load()
         {
@@ -49,26 +49,26 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Foe Slayer
             });
 
-            // add missing spell slots
-            foreach (var slot in CastSpellRanger.SlotsPerLevels)
-            {
-                slot.Slots = Slots[slot.Level - 1];
-            }
-            CastSpellRanger.SetSpellCastingLevel(Slots.Count);
-            SpellListRanger.SetMaxSpellLevel(SpellListRanger.SpellsByLevel.Count);
+            //// add missing spell slots
+            //foreach (var slot in CastSpellRanger.SlotsPerLevels)
+            //{
+            //    slot.Slots = Slots[slot.Level - 1];
+            //}
+            //CastSpellRanger.SetSpellCastingLevel(Slots.Count);
+            //SpellListRanger.SetMaxSpellLevel(SpellListRanger.SpellsByLevel.Count);
 
-            // add Ranger 4th level spells
-            SpellListRanger.SpellsByLevel.RemoveAll(x => x.Level == 4);
-            SpellListRanger.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet
-            {
-                Level = 4,
-                Spells = new List<SpellDefinition>
-                {
-                    ConjureElemental,
-                    FreedomOfMovement,
-                    Stoneskin
-                }
-            });
+            //// add Ranger 4th level spells
+            //SpellListRanger.SpellsByLevel.RemoveAll(x => x.Level == 4);
+            //SpellListRanger.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet
+            //{
+            //    Level = 4,
+            //    Spells = new List<SpellDefinition>
+            //    {
+            //        ConjureElemental,
+            //        FreedomOfMovement,
+            //        Stoneskin
+            //    }
+            //});
         }
     }
 }

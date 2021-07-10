@@ -19,6 +19,8 @@ namespace SolastaLevel20.Viewers
             {
                 UI.Div();
                 UI.Label("Cleric".green());
+                UI.Label("11 - Turn Undead");
+                UI.Label("12 - Ability score or feat");
                 UI.Label("14 - Turn Undead");
                 UI.Label("16 - Ability score or feat");
                 UI.Label("17 - Turn Undead");
@@ -34,6 +36,8 @@ namespace SolastaLevel20.Viewers
             {
                 UI.Div();
                 UI.Label("Fighter".green());
+                UI.Label("11 - Extra Attack");
+                UI.Label("12 - Ability score or feat");
                 UI.Label("13 - Indomitable");
                 UI.Label("14 - Ability score or feat");
                 UI.Label("16 - Ability score or feat");
@@ -50,6 +54,8 @@ namespace SolastaLevel20.Viewers
                 UI.Div();
 
                 UI.Label("Paladin".green());
+                UI.Label("11 - Improved Divine Smite");
+                UI.Label("12 - Ability score or feat");
                 UI.Label("14 - Cleansing Touch" + PLANNED);
                 UI.Label("16 - Ability score or feat");
                 UI.Label("18 - Aura of Courage / Aura of Protection");
@@ -63,6 +69,7 @@ namespace SolastaLevel20.Viewers
             {
                 UI.Div();
                 UI.Label("Ranger".green());
+                UI.Label("12 - Ability score or feat");
                 UI.Label("14 - Favored Enemy");
                 UI.Label("16 - Ability score or feat");
                 UI.Label("18 - Feral Senses" + PLANNED);
@@ -77,6 +84,8 @@ namespace SolastaLevel20.Viewers
             {
                 UI.Div();
                 UI.Label("Rogue".green());
+                UI.Label("11 - Reliable Talent");
+                UI.Label("12 - Ability score or feat");
                 UI.Label("14 - Blind Sense");
                 UI.Label("15 - Slippery Mind");
                 UI.Label("16 - Ability score or feat");
@@ -86,17 +95,31 @@ namespace SolastaLevel20.Viewers
             }
         }
 
+        private static void DisplaySorcerer(float width = DEFAULT_WIDTH)
+        {
+            using (UI.VerticalScope(UI.Width(width)))
+            {
+                UI.Div();
+                UI.Label("Sorcerer".green());
+                UI.Label("12 - Ability score or feat");
+                UI.Label("16 - Ability score or feat");
+                UI.Label("17 - Metamagic" + PLANNED);
+                UI.Label("19 - Ability score or feat");
+                UI.Label("20 - Sorcerous Restoration" + PLANNED);
+            }
+        }
+
         private static void DisplayWizard(float width = DEFAULT_WIDTH)
         {
             using (UI.VerticalScope(UI.Width(width)))
             {
                 UI.Div();
                 UI.Label("Wizard".green());
-                UI.Label("14 - Over Channel" + PLANNED);
+                UI.Label("12 - Ability score or feat");
                 UI.Label("16 - Ability score or feat");
                 UI.Label("18 - Spell Mastery" + PLANNED);
                 UI.Label("19 - Ability score or feat");
-                UI.Label("20 -Signature Spells" + PLANNED);
+                UI.Label("20 - Signature Spells" + PLANNED);
             }
         }
 
@@ -122,6 +145,7 @@ namespace SolastaLevel20.Viewers
                 DisplayPaladin();
                 DisplayRanger();
                 DisplayRogue();
+                DisplaySorcerer();
                 DisplayWizard();
             }
         }

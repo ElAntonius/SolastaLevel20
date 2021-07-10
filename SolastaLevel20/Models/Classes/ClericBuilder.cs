@@ -12,29 +12,29 @@ namespace SolastaLevel20.Models.Classes
 {
     public static class ClericBuilder
     {
-        private static readonly List<List<int>> Slots = new List<List<int>>
-        {
-            new List<int> {2,0,0,0,0},
-            new List<int> {3,0,0,0,0},
-            new List<int> {4,2,0,0,0},
-            new List<int> {4,3,0,0,0},
-            new List<int> {4,3,2,0,0},
-            new List<int> {4,3,3,0,0},
-            new List<int> {4,3,3,1,0},
-            new List<int> {4,3,3,2,0},
-            new List<int> {4,3,3,3,1},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,3},
-            new List<int> {4,3,3,3,3},
-            new List<int> {4,3,3,3,3},
-        };
+        //private static readonly List<List<int>> Slots = new List<List<int>>
+        //{
+        //    new List<int> {2,0,0,0,0},
+        //    new List<int> {3,0,0,0,0},
+        //    new List<int> {4,2,0,0,0},
+        //    new List<int> {4,3,0,0,0},
+        //    new List<int> {4,3,2,0,0},
+        //    new List<int> {4,3,3,0,0},
+        //    new List<int> {4,3,3,1,0},
+        //    new List<int> {4,3,3,2,0},
+        //    new List<int> {4,3,3,3,1},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,3},
+        //    new List<int> {4,3,3,3,3},
+        //    new List<int> {4,3,3,3,3},
+        //};
 
         public static void Load()
         {
@@ -49,13 +49,13 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Divine Intervention Improvement
             });
 
-            // add missing spell slots
-            foreach (var slot in CastSpellCleric.SlotsPerLevels)
-            {
-                slot.Slots = Slots[slot.Level - 1];
-            }
-            CastSpellCleric.SetSpellCastingLevel(Slots.Count);
-            SpellListCleric.SetMaxSpellLevel(SpellListCleric.SpellsByLevel.Count);
+            //// add missing spell slots
+            //foreach (var slot in CastSpellCleric.SlotsPerLevels)
+            //{
+            //    slot.Slots = Slots[slot.Level - 1];
+            //}
+            //CastSpellCleric.SetSpellCastingLevel(Slots.Count);
+            //SpellListCleric.SetMaxSpellLevel(SpellListCleric.SpellsByLevel.Count);
         }
     }
 }

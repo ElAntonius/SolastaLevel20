@@ -13,29 +13,29 @@ namespace SolastaLevel20.Models.Classes
 {
     public static class PaladinBuilder
     {
-        private static readonly List<List<int>> Slots = new List<List<int>>
-        {
-            new List<int> {0,0,0,0,0},
-            new List<int> {2,0,0,0,0},
-            new List<int> {3,0,0,0,0},
-            new List<int> {3,0,0,0,0},
-            new List<int> {4,2,0,0,0},
-            new List<int> {4,2,0,0,0},
-            new List<int> {4,3,0,0,0},
-            new List<int> {4,3,0,0,0},
-            new List<int> {4,3,2,0,0},
-            new List<int> {4,3,2,0,0},
-            new List<int> {4,3,3,0,0},
-            new List<int> {4,3,3,0,0},
-            new List<int> {4,3,3,1,0},
-            new List<int> {4,3,3,1,0},
-            new List<int> {4,3,3,2,0},
-            new List<int> {4,3,3,2,0},
-            new List<int> {4,3,3,3,1},
-            new List<int> {4,3,3,3,1},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-        };
+        //private static readonly List<List<int>> Slots = new List<List<int>>
+        //{
+        //    new List<int> {0,0,0,0,0},
+        //    new List<int> {2,0,0,0,0},
+        //    new List<int> {3,0,0,0,0},
+        //    new List<int> {3,0,0,0,0},
+        //    new List<int> {4,2,0,0,0},
+        //    new List<int> {4,2,0,0,0},
+        //    new List<int> {4,3,0,0,0},
+        //    new List<int> {4,3,0,0,0},
+        //    new List<int> {4,3,2,0,0},
+        //    new List<int> {4,3,2,0,0},
+        //    new List<int> {4,3,3,0,0},
+        //    new List<int> {4,3,3,0,0},
+        //    new List<int> {4,3,3,1,0},
+        //    new List<int> {4,3,3,1,0},
+        //    new List<int> {4,3,3,2,0},
+        //    new List<int> {4,3,3,2,0},
+        //    new List<int> {4,3,3,3,1},
+        //    new List<int> {4,3,3,3,1},
+        //    new List<int> {4,3,3,3,2},
+        //    new List<int> {4,3,3,3,2},
+        //};
 
         public static void Load()
         {
@@ -50,13 +50,13 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Sacred Oath Feature
             );
 
-            // add missing spell slots
-            foreach (var slot in CastSpellPaladin.SlotsPerLevels)
-            {
-                slot.Slots = Slots[slot.Level - 1];
-            }
-            CastSpellPaladin.SetSpellCastingLevel(Slots.Count);
-            SpellListPaladin.SetMaxSpellLevel(SpellListPaladin.SpellsByLevel.Count);
+            //// add missing spell slots
+            //foreach (var slot in CastSpellPaladin.SlotsPerLevels)
+            //{
+            //    slot.Slots = Slots[slot.Level - 1];
+            //}
+            //CastSpellPaladin.SetSpellCastingLevel(Slots.Count);
+            //SpellListPaladin.SetMaxSpellLevel(SpellListPaladin.SpellsByLevel.Count);
 
             // add missing 4th level spells
             SpellListPaladin.SpellsByLevel.RemoveAll(x => x.Level == 4);
