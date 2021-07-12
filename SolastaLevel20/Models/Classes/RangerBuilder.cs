@@ -12,7 +12,6 @@ namespace SolastaLevel20.Models.Classes
             Ranger.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
                 new FeatureUnlockByLevel(AdditionalDamageRangerFavoredEnemyChoice, 14),
                 new FeatureUnlockByLevel(ActionAffinityRangerVanishAction, 14),
-                // TODO 15: Ranger Archetype Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 // TODO 18: Feral Senses
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19),
