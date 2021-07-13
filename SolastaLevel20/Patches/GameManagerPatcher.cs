@@ -11,7 +11,10 @@ namespace SolastaLevel20.Patches
             int[] experienceThresholds = new int[21];
             experienceThresholds[MOD_MAX_LEVEL] = MAX_CHARACTER_EXPERIENCE;
             for (var ix = 0; ix < MOD_MAX_LEVEL; ix++)
+            {
                 experienceThresholds[ix] = RuleDefinitions.ExperienceThresholds[ix];
+            }
+            RuleDefinitions.ExperienceThresholds = experienceThresholds;
         }
 
         [HarmonyPatch(typeof(GameManager), "BindPostDatabase")]
