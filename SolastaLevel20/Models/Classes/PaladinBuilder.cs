@@ -14,12 +14,10 @@ namespace SolastaLevel20.Models.Classes
         {
             Paladin.FeatureUnlocks.AddRange(
                 // TODO 14: Cleansing Touch
-                // TODO 15: Sacred Oath Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 new FeatureUnlockByLevel(PowerPaladinAuraOfCourage18Builder.Instance, 18),
                 new FeatureUnlockByLevel(PowerPaladinAuraOfProtection18Builder.Instance, 18),
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19)
-                // TODO 20: Sacred Oath Feature
             );
 
             // recreate 4th level spells

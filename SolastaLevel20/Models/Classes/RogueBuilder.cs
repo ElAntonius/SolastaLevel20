@@ -13,11 +13,9 @@ namespace SolastaLevel20.Models.Classes
         public static void Load()
         {
             Rogue.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
-                // TODO 13: Roguish Archetype Feature
                 new FeatureUnlockByLevel(ProficiencyRogueBlindSense, 14),
                 new FeatureUnlockByLevel(ProficiencyRogueSlipperyMind, 15),
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
-                // TODO 17: Roguish Archetype Feature
                 // TODO 18: Elusive
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19)
                 // TODO 20: Stroke of Luck

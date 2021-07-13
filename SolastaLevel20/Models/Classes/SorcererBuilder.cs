@@ -9,9 +9,6 @@ namespace SolastaLevel20.Models.Classes
     {
         public static void Load()
         {
-            // waiting for updated ModApi...
-            var Sorcerer = DatabaseRepository.GetDatabase<CharacterClassDefinition>().GetElement("Sorcerer");
-            var PointPoolSorcererAdditionalMetamagic = DatabaseRepository.GetDatabase<FeatureDefinitionPointPool>().GetElement("PointPoolSorcererAdditionalMetamagic");
             // add missing progression
             Sorcerer.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 12),

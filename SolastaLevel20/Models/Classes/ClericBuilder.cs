@@ -16,7 +16,6 @@ namespace SolastaLevel20.Models.Classes
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 new FeatureUnlockByLevel(PowerClericTurnUndead17, 17),
                 new FeatureUnlockByLevel(AttributeModifierClericChannelDivinityAdd, 18),
-                // TODO 17: Divine Domain Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19)
                 // TODO 20: Divine Intervention Improvement
             });

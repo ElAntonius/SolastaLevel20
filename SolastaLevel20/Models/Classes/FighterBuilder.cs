@@ -14,11 +14,9 @@ namespace SolastaLevel20.Models.Classes
             Fighter.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
                 new FeatureUnlockByLevel(AttributeModifierFighterIndomitableAdd, 13),
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 14),
-                // TODO 15: Martial Archetype Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 new FeatureUnlockByLevel(PowerFighterActionSurge, 17),
                 new FeatureUnlockByLevel(AttributeModifierFighterIndomitableAdd, 17),
-                // TODO 18: Martial Archetype Feature
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19),
                 new FeatureUnlockByLevel(AttributeModifierFighterExtraAttack, 20)
             });
