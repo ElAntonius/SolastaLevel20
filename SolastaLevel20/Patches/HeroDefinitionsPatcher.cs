@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using static SolastaLevel20.Settings;
 
 namespace SolastaLevel20.Patches
 {
@@ -9,7 +10,7 @@ namespace SolastaLevel20.Patches
         {
             internal static bool Prefix(ref int __result)
             {
-                __result = 1000000;
+                __result = MAX_CHARACTER_EXPERIENCE;
                 return false;
             }
         }
