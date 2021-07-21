@@ -8,6 +8,56 @@ namespace SolastaLevel20.Models.Classes
 {
     public static class SorcererBuilder
     {
+        private static readonly List<int> KnownSpells = new List<int> 
+        {
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            12,
+            13,
+            13,
+            14,
+            14,
+            15,
+            15,
+            15,
+            15,
+            0
+        };
+
+        private static readonly List<int> ReplacedSpells = new List<int>
+        {
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+        };
+
         private static readonly List<List<int>> Slots = new List<List<int>>
         {
             new List<int> {2,0,0,0,0,0,0},
@@ -48,6 +98,12 @@ namespace SolastaLevel20.Models.Classes
             {
                 slot.Slots = Slots[slot.Level - 1];
             }
+
+            CastSpellSorcerer.KnownSpells.Clear();
+            CastSpellSorcerer.KnownSpells.AddRange(KnownSpells);
+
+            CastSpellSorcerer.ReplacedSpells.Clear();
+            CastSpellSorcerer.ReplacedSpells.AddRange(ReplacedSpells);
         }
     }
 }

@@ -6,6 +6,31 @@ namespace SolastaLevel20.Patches
 {
     class GameManagerPatcher
     {
+        internal static void FixCastSpellTables()
+        {
+            var featureDefinitionCastSpellDB = DatabaseRepository.GetDatabase<FeatureDefinitionCastSpell>();
+
+            foreach (var featureDefinitionCastSpell in featureDefinitionCastSpellDB)
+            {
+                while (featureDefinitionCastSpell.KnownCantrips.Count < MOD_MAX_LEVEL + 1)
+                {
+                    featureDefinitionCastSpell.KnownCantrips.Add(0);
+                }
+                while (featureDefinitionCastSpell.KnownSpells.Count < MOD_MAX_LEVEL + 1)
+                {
+                    featureDefinitionCastSpell.KnownSpells.Add(0);
+                }
+                while (featureDefinitionCastSpell.ScribedSpells.Count < MOD_MAX_LEVEL + 1)
+                {
+                    featureDefinitionCastSpell.ScribedSpells.Add(0);
+                }
+                while (featureDefinitionCastSpell.ReplacedSpells.Count < MOD_MAX_LEVEL + 1)
+                {
+                    featureDefinitionCastSpell.ReplacedSpells.Add(0);
+                }
+            }
+        }
+
         internal static void FixExperienceTable()
         {
             int[] experienceThresholds = new int[21];
@@ -22,14 +47,15 @@ namespace SolastaLevel20.Patches
         {
             internal static void Postfix()
             {
+                FixCastSpellTables();
                 FixExperienceTable();
 
-                if (Main.Settings.enableClericProgression) ClericBuilder.Load();
-                if (Main.Settings.enableFighterProgression) FighterBuilder.Load();
-                if (Main.Settings.enablePaladinProgression) PaladinBuilder.Load();
-                if (Main.Settings.enableRangerProgression) RangerBuilder.Load();
-                if (Main.Settings.enableRogueProgression) RogueBuilder.Load();
-                if (Main.Settings.enableWizardProgression) WizardBuilder.Load();
+                ClericBuilder.Load();
+                FighterBuilder.Load();
+                PaladinBuilder.Load();
+                RangerBuilder.Load();
+                RogueBuilder.Load();
+                WizardBuilder.Load();
             }
         }
     }
