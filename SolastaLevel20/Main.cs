@@ -3,31 +3,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using UnityModManagerNet;
-using I2.Loc;
 using ModKit;
 
 namespace SolastaLevel20
 {
-    public class Core
-    {
-
-    }
-
-    public class Settings : UnityModManager.ModSettings
-    {
-        public const int MOD_MIN_LEVEL = 1;
-        public const int MOD_MAX_LEVEL = 20;
-        public const int GAME_MAX_LEVEL = 13;
-        public const int MAX_CHARACTER_EXPERIENCE = 1000000;
-
-        public bool enableClericProgression = true;
-        public bool enableFighterProgression = true;
-        public bool enablePaladinProgression = true;
-        public bool enableRangerProgression = true;
-        public bool enableRogueProgression = true;
-        public bool enableWizardProgression = true;
-    }
-
     public class Main
     {
         public static readonly string MOD_FOLDER = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -42,48 +21,6 @@ namespace SolastaLevel20
         internal static MenuManager Menu;
         internal static Settings Settings { get { return Mod.Settings; } }
 
-        internal static void LoadTranslations()
-        {
-            DirectoryInfo directoryInfo = new DirectoryInfo(MOD_FOLDER);
-            FileInfo[] files = directoryInfo.GetFiles($"Translations-??.txt");
-
-            foreach (var file in files)
-            {
-                var filename = Path.Combine(MOD_FOLDER, file.Name);
-                var code = file.Name.Substring(13, 2);
-                var languageSourceData = LocalizationManager.Sources[0];
-                var languageIndex = languageSourceData.GetLanguageIndexFromCode(code);
-
-                if (languageIndex < 0)
-                    Error($"language {code} not currently loaded.");
-                else
-                    using (var sr = new StreamReader(filename))
-                    {
-                        string line, term, text;
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            try
-                            {
-                                var splitted = line.Split(new[] { '\t', ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
-                                term = splitted[0];
-                                text = splitted[1];
-                            }
-                            catch
-                            {
-                                Error($"invalid translation line \"{line}\".");
-                                continue;
-                            }
-                            if (languageSourceData.ContainsTerm(term))
-                            {
-                                languageSourceData.RemoveTerm(term);
-                                Warning($"official game term {term} was overwritten with \"{text}\"");
-                            }
-                            languageSourceData.AddTerm(term).Languages[languageIndex] = text;
-                        }
-                    }
-            }
-        }
-
         internal static bool Load(UnityModManager.ModEntry modEntry)
         {
             try
@@ -91,8 +28,6 @@ namespace SolastaLevel20
                 var assembly = Assembly.GetExecutingAssembly();
 
                 Logger = modEntry.Logger;
-
-                LoadTranslations();
 
                 Mod = new ModManager<Core, Settings>();
                 Mod.Enable(modEntry, assembly);
@@ -104,7 +39,6 @@ namespace SolastaLevel20
                 Error(ex);
                 throw;
             }
-
             return true;
         }
     }

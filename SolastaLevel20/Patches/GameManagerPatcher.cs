@@ -31,31 +31,18 @@ namespace SolastaLevel20.Patches
             }
         }
 
-        internal static void FixExperienceTable()
-        {
-            int[] experienceThresholds = new int[21];
-            experienceThresholds[MOD_MAX_LEVEL] = MAX_CHARACTER_EXPERIENCE;
-            for (var ix = 0; ix < MOD_MAX_LEVEL; ix++)
-            {
-                experienceThresholds[ix] = RuleDefinitions.ExperienceThresholds[ix];
-            }
-            RuleDefinitions.ExperienceThresholds = experienceThresholds;
-        }
-
         [HarmonyPatch(typeof(GameManager), "BindPostDatabase")]
         internal static class GameManager_BindPostDatabase_Patch
         {
             internal static void Postfix()
             {
-                FixCastSpellTables();
-                FixExperienceTable();
-
                 ClericBuilder.Load();
                 FighterBuilder.Load();
                 PaladinBuilder.Load();
                 RangerBuilder.Load();
                 RogueBuilder.Load();
                 WizardBuilder.Load();
+                FixCastSpellTables();
             }
         }
     }

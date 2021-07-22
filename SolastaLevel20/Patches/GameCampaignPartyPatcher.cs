@@ -10,15 +10,14 @@ namespace SolastaLevel20.Patches
         {
             internal static bool Prefix(GameCampaignParty __instance)
             {
-                int levelCap = MOD_MAX_LEVEL;
                 foreach (GameCampaignCharacter characters in __instance.CharactersList)
                 {
-                    RulesetAttribute attribute1 = characters.RulesetCharacter.GetAttribute("CharacterLevel");
-                    attribute1.MaxValue = levelCap > 0 ? levelCap : 13;
-                    attribute1.Refresh();
-                    RulesetAttribute attribute2 = characters.RulesetCharacter.GetAttribute("Experience");
-                    attribute2.MaxValue = HeroDefinitions.MaxHeroExperience(attribute1.MaxValue);
-                    attribute2.Refresh();
+                    RulesetAttribute characterLevelAttribute = characters.RulesetCharacter.GetAttribute("CharacterLevel");
+                    characterLevelAttribute.MaxValue = MOD_MAX_LEVEL;
+                    characterLevelAttribute.Refresh();
+                    RulesetAttribute experienceAttribute = characters.RulesetCharacter.GetAttribute("Experience");
+                    experienceAttribute.MaxValue = HeroDefinitions.MaxHeroExperience(characterLevelAttribute.MaxValue);
+                    experienceAttribute.Refresh();
                 }
                 return false;
             }
