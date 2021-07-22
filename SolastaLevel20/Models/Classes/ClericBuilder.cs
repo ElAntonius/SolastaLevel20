@@ -7,33 +7,9 @@ using static SolastaLevel20.Models.Features.PowerClericTurnUndeadBuilder;
 
 namespace SolastaLevel20.Models.Classes
 {
-    public static class ClericBuilder
+    internal static class ClericBuilder
     {
-        private static readonly List<List<int>> Slots = new List<List<int>>
-        {
-            new List<int> {2,0,0,0,0,0,0,0,0},
-            new List<int> {3,0,0,0,0,0,0,0,0},
-            new List<int> {4,2,0,0,0,0,0,0,0},
-            new List<int> {4,3,0,0,0,0,0,0,0},
-            new List<int> {4,3,2,0,0,0,0,0,0},
-            new List<int> {4,3,3,0,0,0,0,0,0},
-            new List<int> {4,3,3,1,0,0,0,0,0},
-            new List<int> {4,3,3,2,0,0,0,0,0},
-            new List<int> {4,3,3,3,1,0,0,0,0},
-            new List<int> {4,3,3,3,2,0,0,0,0},
-            new List<int> {4,3,3,3,2,1,0,0,0},
-            new List<int> {4,3,3,3,2,1,0,0,0},
-            new List<int> {4,3,3,3,2,1,1,0,0},
-            new List<int> {4,3,3,3,2,1,1,0,0},
-            new List<int> {4,3,3,3,2,1,1,1,0},
-            new List<int> {4,3,3,3,2,1,1,1,0},
-            new List<int> {4,3,3,3,2,1,1,1,1},
-            new List<int> {4,3,3,3,3,1,1,1,1},
-            new List<int> {4,3,3,3,3,2,1,1,1},
-            new List<int> {4,3,3,3,3,2,2,1,1},
-        };
-
-        public static void Load()
+        internal static void Load()
         {
             // add missing progression
             Cleric.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
@@ -45,11 +21,8 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Divine Intervention Improvement
             });
 
-            // add missing spell slots
-            foreach (var slot in CastSpellCleric.SlotsPerLevels)
-            {
-                slot.Slots = Slots[slot.Level - 1];
-            }
+            CastSpellCleric.SlotsPerLevels.Clear();
+            CastSpellCleric.SlotsPerLevels.AddRange(Common.FullCastingSlots);
         }
     }
 }

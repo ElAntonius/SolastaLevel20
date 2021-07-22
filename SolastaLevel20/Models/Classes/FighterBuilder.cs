@@ -7,9 +7,9 @@ using static SolastaLevel20.Models.Features.AttributeModifierFighterIndomitableB
 
 namespace SolastaLevel20.Models.Classes
 {
-    public static class FighterBuilder
+    internal static class FighterBuilder
     {
-        public static void Load()
+        internal static void Load()
         {
             Fighter.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
                 new FeatureUnlockByLevel(AttributeModifierFighterIndomitableAdd, 13),

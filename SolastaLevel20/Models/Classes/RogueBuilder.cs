@@ -10,7 +10,7 @@ namespace SolastaLevel20.Models.Classes
 {
     class RogueBuilder
     {
-        public static void Load()
+        internal static void Load()
         {
             Rogue.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
                 new FeatureUnlockByLevel(ProficiencyRogueBlindSense, 14),

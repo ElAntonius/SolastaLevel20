@@ -18,7 +18,7 @@ namespace SolastaLevel20.Models.Features
         private static FeatureDefinitionProficiency CreateAndAddToDB(string name, string guid)
             => new ProficiencyRogueSlipperyMindBuilder(name, guid).AddToDB();
 
-        public static readonly FeatureDefinitionProficiency ProficiencyRogueSlipperyMind
+        internal static readonly FeatureDefinitionProficiency ProficiencyRogueSlipperyMind
             = CreateAndAddToDB(ProficiencyRogueSlipperyMindName, ProficiencyRogueSlipperyMindGuid);
     }
 }

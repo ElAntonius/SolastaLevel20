@@ -25,7 +25,7 @@ namespace SolastaLevel20.Models.Features
             Definition.GuiPresentation.Title = "Feature/&PowerPaladinAuraOfCourage18Title";
         }
 
-        public static FeatureDefinitionPower Instance
+        internal static FeatureDefinitionPower Instance
         {
             get
             {

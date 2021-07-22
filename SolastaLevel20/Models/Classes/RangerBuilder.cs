@@ -6,33 +6,9 @@ using static SolastaLevel20.Models.Features.ActionAffinityRangerVanishActionBuil
 
 namespace SolastaLevel20.Models.Classes
 {
-    public static class RangerBuilder
+    internal static class RangerBuilder
     {
-        private static readonly List<List<int>> Slots = new List<List<int>>
-        {
-            new List<int> {0,0,0,0,0},
-            new List<int> {2,0,0,0,0},
-            new List<int> {3,0,0,0,0},
-            new List<int> {3,0,0,0,0},
-            new List<int> {4,2,0,0,0},
-            new List<int> {4,2,0,0,0},
-            new List<int> {4,3,0,0,0},
-            new List<int> {4,3,0,0,0},
-            new List<int> {4,3,2,0,0},
-            new List<int> {4,3,2,0,0},
-            new List<int> {4,3,3,0,0},
-            new List<int> {4,3,3,0,0},
-            new List<int> {4,3,3,1,0},
-            new List<int> {4,3,3,1,0},
-            new List<int> {4,3,3,2,0},
-            new List<int> {4,3,3,2,0},
-            new List<int> {4,3,3,3,1},
-            new List<int> {4,3,3,3,1},
-            new List<int> {4,3,3,3,2},
-            new List<int> {4,3,3,3,2},
-        };
-
-        public static void Load()
+        internal static void Load()
         {
             Ranger.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
                 new FeatureUnlockByLevel(AdditionalDamageRangerFavoredEnemyChoice, 14),
@@ -43,11 +19,8 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Foe Slayer
             });
 
-            // add missing spell slots
-            foreach (var slot in CastSpellRanger.SlotsPerLevels)
-            {
-                slot.Slots = Slots[slot.Level - 1];
-            }
+            CastSpellRanger.SlotsPerLevels.Clear();
+            CastSpellRanger.SlotsPerLevels.AddRange(Common.HalfCastingSlots);
         }
     }
 }

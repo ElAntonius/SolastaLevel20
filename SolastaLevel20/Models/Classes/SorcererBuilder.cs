@@ -6,7 +6,7 @@ using static SolastaModApi.DatabaseHelper.FeatureDefinitionPointPools;
 
 namespace SolastaLevel20.Models.Classes
 {
-    public static class SorcererBuilder
+    internal static class SorcererBuilder
     {
         private static readonly List<int> KnownSpells = new List<int> 
         {
@@ -30,7 +30,6 @@ namespace SolastaLevel20.Models.Classes
             15,
             15,
             15,
-            0
         };
 
         private static readonly List<int> ReplacedSpells = new List<int>
@@ -55,34 +54,9 @@ namespace SolastaLevel20.Models.Classes
             1,
             1,
             1,
-            0
         };
 
-        private static readonly List<List<int>> Slots = new List<List<int>>
-        {
-            new List<int> {2,0,0,0,0,0,0,0,0},
-            new List<int> {3,0,0,0,0,0,0,0,0},
-            new List<int> {4,2,0,0,0,0,0,0,0},
-            new List<int> {4,3,0,0,0,0,0,0,0},
-            new List<int> {4,3,2,0,0,0,0,0,0},
-            new List<int> {4,3,3,0,0,0,0,0,0},
-            new List<int> {4,3,3,1,0,0,0,0,0},
-            new List<int> {4,3,3,2,0,0,0,0,0},
-            new List<int> {4,3,3,3,1,0,0,0,0},
-            new List<int> {4,3,3,3,2,0,0,0,0},
-            new List<int> {4,3,3,3,2,1,0,0,0},
-            new List<int> {4,3,3,3,2,1,0,0,0},
-            new List<int> {4,3,3,3,2,1,1,0,0},
-            new List<int> {4,3,3,3,2,1,1,0,0},
-            new List<int> {4,3,3,3,2,1,1,1,0},
-            new List<int> {4,3,3,3,2,1,1,1,0},
-            new List<int> {4,3,3,3,2,1,1,1,1},
-            new List<int> {4,3,3,3,3,1,1,1,1},
-            new List<int> {4,3,3,3,3,2,1,1,1},
-            new List<int> {4,3,3,3,3,2,2,1,1},
-        };
-
-        public static void Load()
+        internal static void Load()
         {
             // add missing progression
             Sorcerer.FeatureUnlocks.AddRange(new List<FeatureUnlockByLevel> {
@@ -93,11 +67,8 @@ namespace SolastaLevel20.Models.Classes
                 // TODO: Sorcerous Restoration
             });
 
-            // add missing spell slots
-            foreach (var slot in CastSpellSorcerer.SlotsPerLevels)
-            {
-                slot.Slots = Slots[slot.Level - 1];
-            }
+            CastSpellSorcerer.SlotsPerLevels.Clear();
+            CastSpellSorcerer.SlotsPerLevels.AddRange(Common.FullCastingSlots);
 
             CastSpellSorcerer.KnownSpells.Clear();
             CastSpellSorcerer.KnownSpells.AddRange(KnownSpells);

@@ -20,10 +20,10 @@ namespace SolastaLevel20.Models.Features
         private static FeatureDefinitionPower CreateAndAddToDB(string name, string guid, int challengeRating)
             => new PowerClericTurnUndeadBuilder(name, guid, challengeRating).AddToDB();
 
-        public static readonly FeatureDefinitionPower PowerClericTurnUndead14 =
+        internal static readonly FeatureDefinitionPower PowerClericTurnUndead14 =
             CreateAndAddToDB(PowerClericTurnUndead14Name, PowerClericTurnUndead14Guid, 3);
 
-        public static readonly FeatureDefinitionPower PowerClericTurnUndead17 =
+        internal static readonly FeatureDefinitionPower PowerClericTurnUndead17 =
             CreateAndAddToDB(PowerClericTurnUndead17Name, PowerClericTurnUndead17Guid, 4);
     }
 }

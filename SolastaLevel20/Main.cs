@@ -9,7 +9,7 @@ namespace SolastaLevel20
 {
     public class Main
     {
-        public static readonly string MOD_FOLDER = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        internal static readonly string MOD_FOLDER = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         [Conditional("DEBUG")]
         internal static void Log(string msg) => Logger.Log(msg);

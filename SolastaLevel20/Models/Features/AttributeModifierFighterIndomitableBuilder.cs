@@ -19,7 +19,7 @@ namespace SolastaLevel20.Models.Features
         private static FeatureDefinitionAttributeModifier CreateAndAddToDB(string name, string guid)
             => new AttributeModifierFighterIndomitableBuilder(name, guid).AddToDB();
 
-        public static readonly FeatureDefinitionAttributeModifier AttributeModifierFighterIndomitableAdd = 
+        internal static readonly FeatureDefinitionAttributeModifier AttributeModifierFighterIndomitableAdd = 
             CreateAndAddToDB(AttributeModifierFighterIndomitableAddName, AttributeModifierFighterIndomitableAddGuid);
     }
 }
