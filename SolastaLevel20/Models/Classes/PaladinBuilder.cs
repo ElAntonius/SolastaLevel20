@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SolastaModApi.Extensions;
 using SolastaModApi.Infrastructure;
 using SolastaLevel20.Models.Features;
 using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
@@ -33,6 +34,9 @@ namespace SolastaLevel20.Models.Classes
                 }
             });
 
+            SpellListPaladin.SetMaxSpellLevel(5);
+
+            CastSpellPaladin.SetSpellCastingLevel(-1);
             CastSpellPaladin.SlotsPerLevels.Clear();
             CastSpellPaladin.SlotsPerLevels.AddRange(Common.HalfCastingSlots);
         }

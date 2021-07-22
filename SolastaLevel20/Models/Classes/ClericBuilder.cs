@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using SolastaModApi.Extensions;
 using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionAttributeModifiers;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
+using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 using static SolastaLevel20.Models.Features.PowerClericTurnUndeadBuilder;
 
 namespace SolastaLevel20.Models.Classes
@@ -21,6 +23,9 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Divine Intervention Improvement
             });
 
+            SpellListCleric.SetMaxSpellLevel(6);
+
+            CastSpellCleric.SetSpellCastingLevel(-1);
             CastSpellCleric.SlotsPerLevels.Clear();
             CastSpellCleric.SlotsPerLevels.AddRange(Common.FullCastingSlots);
         }

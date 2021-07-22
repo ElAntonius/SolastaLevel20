@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using SolastaModApi.Extensions;
 using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionPointPools;
+using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 
 namespace SolastaLevel20.Models.Classes
 {
@@ -67,12 +69,13 @@ namespace SolastaLevel20.Models.Classes
                 // TODO: Sorcerous Restoration
             });
 
+            SpellListSorcerer.SetMaxSpellLevel(6);
+
+            CastSpellSorcerer.SetSpellCastingLevel(-1);
             CastSpellSorcerer.SlotsPerLevels.Clear();
             CastSpellSorcerer.SlotsPerLevels.AddRange(Common.FullCastingSlots);
-
             CastSpellSorcerer.KnownSpells.Clear();
             CastSpellSorcerer.KnownSpells.AddRange(KnownSpells);
-
             CastSpellSorcerer.ReplacedSpells.Clear();
             CastSpellSorcerer.ReplacedSpells.AddRange(ReplacedSpells);
         }
