@@ -34,30 +34,6 @@ namespace SolastaLevel20.Models.Classes
             15,
         };
 
-        private static readonly List<int> ReplacedSpells = new List<int>
-        {
-            0,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-            1,
-        };
-
         internal static void Load()
         {
             // add missing progression
@@ -69,15 +45,18 @@ namespace SolastaLevel20.Models.Classes
                 // TODO: Sorcerous Restoration
             });
 
-            SpellListSorcerer.SetMaxSpellLevel(6);
+            SpellListSorcerer.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
 
             CastSpellSorcerer.SetSpellCastingLevel(-1);
+
             CastSpellSorcerer.SlotsPerLevels.Clear();
             CastSpellSorcerer.SlotsPerLevels.AddRange(Common.FullCastingSlots);
+
             CastSpellSorcerer.KnownSpells.Clear();
             CastSpellSorcerer.KnownSpells.AddRange(KnownSpells);
+
             CastSpellSorcerer.ReplacedSpells.Clear();
-            CastSpellSorcerer.ReplacedSpells.AddRange(ReplacedSpells);
+            CastSpellSorcerer.ReplacedSpells.AddRange(Common.FullCasterReplacedSpells);
         }
     }
 }

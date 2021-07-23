@@ -21,11 +21,15 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Foe Slayer
             });
 
-            SpellListRanger.SetMaxSpellLevel(5);
+            SpellListRanger.SetMaxSpellLevel(Common.HalfCastingSlots[0].Slots.Count);
 
             CastSpellRanger.SetSpellCastingLevel(-1);
+
             CastSpellRanger.SlotsPerLevels.Clear();
             CastSpellRanger.SlotsPerLevels.AddRange(Common.HalfCastingSlots);
+
+            CastSpellRanger.ReplacedSpells.Clear();
+            CastSpellRanger.ReplacedSpells.AddRange(Common.HalfCasterReplacedSpells);
         }
     }
 }

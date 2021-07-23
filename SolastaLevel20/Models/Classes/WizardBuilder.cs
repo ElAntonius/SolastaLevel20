@@ -9,6 +9,8 @@ namespace SolastaLevel20.Models.Classes
 {
     internal static class WizardBuilder
     {
+
+
         internal static void Load()
         {
             // add missing progression
@@ -20,12 +22,16 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Signature Spells
             });
 
-            SpellListWizardGreenmage.SetMaxSpellLevel(6);
-            SpellListWizard.SetMaxSpellLevel(6);
+            SpellListWizard.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
+            SpellListWizardGreenmage.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
 
             CastSpellWizard.SetSpellCastingLevel(-1);
+
             CastSpellWizard.SlotsPerLevels.Clear();
             CastSpellWizard.SlotsPerLevels.AddRange(Common.FullCastingSlots);
+
+            CastSpellWizard.ReplacedSpells.Clear();
+            CastSpellWizard.ReplacedSpells.AddRange(Common.EmptyReplacedSpells);
         }
     }
 }

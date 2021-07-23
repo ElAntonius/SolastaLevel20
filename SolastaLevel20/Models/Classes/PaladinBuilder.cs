@@ -34,11 +34,15 @@ namespace SolastaLevel20.Models.Classes
                 }
             });
 
-            SpellListPaladin.SetMaxSpellLevel(5);
+            SpellListPaladin.SetMaxSpellLevel(Common.HalfCastingSlots[0].Slots.Count);
 
             CastSpellPaladin.SetSpellCastingLevel(-1);
+
             CastSpellPaladin.SlotsPerLevels.Clear();
             CastSpellPaladin.SlotsPerLevels.AddRange(Common.HalfCastingSlots);
+
+            CastSpellPaladin.ReplacedSpells.Clear();
+            CastSpellPaladin.ReplacedSpells.AddRange(Common.EmptyReplacedSpells);
         }
     }
 }
