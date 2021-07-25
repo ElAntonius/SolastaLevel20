@@ -23,7 +23,16 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Divine Intervention Improvement
             });
 
-            SpellListCleric.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
+            var maxSpellLevel = 9;
+            var accountForCantrips = SpellListCleric.HasCantrips ? 1 : 0;
+
+            SpellListCleric.SetMaxSpellLevel(maxSpellLevel);
+
+            while (SpellListCleric.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
+            {
+                SpellListCleric.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListCleric.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
+            }
+            
 
             CastSpellCleric.SetSpellCastingLevel(-1);
 

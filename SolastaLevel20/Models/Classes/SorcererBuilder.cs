@@ -45,7 +45,15 @@ namespace SolastaLevel20.Models.Classes
                 // TODO: Sorcerous Restoration
             });
 
-            SpellListSorcerer.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
+            var maxSpellLevel = 9;
+            var accountForCantrips = SpellListSorcerer.HasCantrips ? 1 : 0;
+
+            SpellListSorcerer.SetMaxSpellLevel(maxSpellLevel);
+
+            while (SpellListSorcerer.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
+            {
+                SpellListSorcerer.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListSorcerer.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
+            }
 
             CastSpellSorcerer.SetSpellCastingLevel(-1);
 

@@ -22,8 +22,25 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Signature Spells
             });
 
-            SpellListWizard.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
-            SpellListWizardGreenmage.SetMaxSpellLevel(Common.FullCastingSlots[0].Slots.Count);
+            var maxSpellLevel = 9;
+            int accountForCantrips;
+
+            accountForCantrips = SpellListWizard.HasCantrips ? 1 : 0;
+            SpellListWizard.SetMaxSpellLevel(maxSpellLevel);
+
+            while (SpellListWizard.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
+            {
+                SpellListWizard.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListWizard.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
+            }
+
+            accountForCantrips = SpellListWizardGreenmage.HasCantrips ? 1 : 0;
+            SpellListWizardGreenmage.SetMaxSpellLevel(maxSpellLevel);
+
+            while (SpellListWizardGreenmage.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
+            {
+                SpellListWizardGreenmage.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListWizardGreenmage.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
+            }
+
 
             CastSpellWizard.SetSpellCastingLevel(-1);
 
