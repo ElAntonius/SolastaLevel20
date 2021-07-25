@@ -49,7 +49,7 @@ namespace SolastaLevel20.Patches
                 MartialSpellBladeBuilder.Load();
                 MartialSpellBladeBuilder.Load();
 
-                FixCastSpellTables();
+                //FixCastSpellTables();
             }
         }
     }
