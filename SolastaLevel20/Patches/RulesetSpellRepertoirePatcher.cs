@@ -9,10 +9,13 @@ namespace SolastaLevel20.Patches
         {
             internal static void Postfix(RulesetSpellRepertoire __instance, ref int __result)
             {
-                FeatureDefinitionCastSpell.SlotsByLevelDuplet slotsPerLevel = __instance.SpellCastingFeature.SlotsPerLevels[__instance.SpellCastingLevel - 1];
+                if (__instance.SpellCastingFeature != null)
+                {
+                    FeatureDefinitionCastSpell.SlotsByLevelDuplet slotsPerLevel = __instance.SpellCastingFeature.SlotsPerLevels[__instance.SpellCastingLevel - 1];
 
-                int num = slotsPerLevel.Slots.IndexOf(0);
-                __result = num;
+                    int num = slotsPerLevel.Slots.IndexOf(0);
+                    __result = num;
+                }
             }
         }
     }
