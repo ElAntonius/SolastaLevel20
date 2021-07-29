@@ -12,21 +12,24 @@ namespace SolastaLevel20.Patches
 
             foreach (var featureDefinitionCastSpell in featureDefinitionCastSpellDB)
             {
-                while (featureDefinitionCastSpell.KnownCantrips.Count < MOD_MAX_LEVEL + 1)
+                if (featureDefinitionCastSpell.SpellCastingOrigin != FeatureDefinitionCastSpell.CastingOrigin.Monster)
                 {
-                    featureDefinitionCastSpell.KnownCantrips.Add(0);
-                }
-                while (featureDefinitionCastSpell.KnownSpells.Count < MOD_MAX_LEVEL + 1)
-                {
-                    featureDefinitionCastSpell.KnownSpells.Add(0);
-                }
-                while (featureDefinitionCastSpell.ScribedSpells.Count < MOD_MAX_LEVEL + 1)
-                {
-                    featureDefinitionCastSpell.ScribedSpells.Add(0);
-                }
-                while (featureDefinitionCastSpell.ReplacedSpells.Count < MOD_MAX_LEVEL + 1)
-                {
-                    featureDefinitionCastSpell.ReplacedSpells.Add(0);
+                    while (featureDefinitionCastSpell.KnownCantrips.Count < MOD_MAX_LEVEL + 1)
+                    {
+                        featureDefinitionCastSpell.KnownCantrips.Add(0);
+                    }
+                    while (featureDefinitionCastSpell.KnownSpells.Count < MOD_MAX_LEVEL + 1)
+                    {
+                        featureDefinitionCastSpell.KnownSpells.Add(0);
+                    }
+                    while (featureDefinitionCastSpell.ScribedSpells.Count < MOD_MAX_LEVEL + 1)
+                    {
+                        featureDefinitionCastSpell.ScribedSpells.Add(0);
+                    }
+                    while (featureDefinitionCastSpell.ReplacedSpells.Count < MOD_MAX_LEVEL + 1)
+                    {
+                        featureDefinitionCastSpell.ReplacedSpells.Add(0);
+                    }
                 }
             }
         }
@@ -49,7 +52,7 @@ namespace SolastaLevel20.Patches
                 MartialSpellBladeBuilder.Load();
                 MartialSpellBladeBuilder.Load();
 
-                //FixCastSpellTables();
+                FixCastSpellTables();
             }
         }
     }
