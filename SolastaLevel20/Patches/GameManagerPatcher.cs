@@ -50,7 +50,7 @@ namespace SolastaLevel20.Patches
                 WizardBuilder.Load();
 
                 MartialSpellBladeBuilder.Load();
-                MartialSpellBladeBuilder.Load();
+                ShadowcasterBuilder.Load();
 
                 FixCastSpellTables();
             }
