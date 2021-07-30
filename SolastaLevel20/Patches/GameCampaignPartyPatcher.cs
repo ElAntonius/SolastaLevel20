@@ -16,7 +16,7 @@ namespace SolastaLevel20.Patches
                     characterLevelAttribute.MaxValue = MOD_MAX_LEVEL;
                     characterLevelAttribute.Refresh();
                     RulesetAttribute experienceAttribute = characters.RulesetCharacter.GetAttribute("Experience");
-                    experienceAttribute.MaxValue = HeroDefinitions.MaxHeroExperience(characterLevelAttribute.MaxValue);
+                    experienceAttribute.MaxValue = MAX_CHARACTER_EXPERIENCE;
                     experienceAttribute.Refresh();
                 }
                 return false;

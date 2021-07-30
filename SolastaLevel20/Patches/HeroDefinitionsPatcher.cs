@@ -3,6 +3,7 @@ using static SolastaLevel20.Settings;
 
 namespace SolastaLevel20.Patches
 {
+    // caps level up to 20 max
     class HeroDefinitionsPatcher
     {
         [HarmonyPatch(typeof(HeroDefinitions), "MaxHeroExperience")]

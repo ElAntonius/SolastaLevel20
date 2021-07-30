@@ -2,6 +2,7 @@
 
 namespace SolastaLevel20.Patches
 {
+    // fixes a level up issue from 19 to 20
     class RulesetSpellRepertoirePatcher
     {
         [HarmonyPatch(typeof(RulesetSpellRepertoire), "MaxSpellLevelOfSpellCastingLevel", MethodType.Getter)]

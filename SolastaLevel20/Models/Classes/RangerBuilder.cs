@@ -3,7 +3,6 @@ using SolastaModApi.Extensions;
 using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
-using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 using static SolastaLevel20.Models.Features.ActionAffinityRangerVanishActionBuilder;
 
 namespace SolastaLevel20.Models.Classes
@@ -21,23 +20,13 @@ namespace SolastaLevel20.Models.Classes
                 // TODO 20: Foe Slayer
             });
 
-            var maxSpellLevel = 5;
-            var accountForCantrips = SpellListRanger.HasCantrips ? 1 : 0;
-
-            SpellListRanger.SetMaxSpellLevel(maxSpellLevel);
-
-            while (SpellListRanger.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
-            {
-                SpellListRanger.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListRanger.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
-            }
-
-            CastSpellRanger.SetSpellCastingLevel(-1);
+            CastSpellRanger.SetSpellCastingLevel(5);
 
             CastSpellRanger.SlotsPerLevels.Clear();
-            CastSpellRanger.SlotsPerLevels.AddRange(Common.HalfCastingSlots);
+            CastSpellRanger.SlotsPerLevels.AddRange(SpellsHelper.HalfCastingSlots);
 
             CastSpellRanger.ReplacedSpells.Clear();
-            CastSpellRanger.ReplacedSpells.AddRange(Common.HalfCasterReplacedSpells);
+            CastSpellRanger.ReplacedSpells.AddRange(SpellsHelper.HalfCasterReplacedSpells);
         }
     }
 }

@@ -34,23 +34,13 @@ namespace SolastaLevel20.Models.Classes
                 }
             });
 
-            var maxSpellLevel = 5;
-            var accountForCantrips = SpellListPaladin.HasCantrips ? 1 : 0;
-
-            SpellListPaladin.SetMaxSpellLevel(maxSpellLevel);
-
-            while (SpellListPaladin.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
-            {
-                SpellListPaladin.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListPaladin.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
-            }
-
-            CastSpellPaladin.SetSpellCastingLevel(-1);
+            CastSpellPaladin.SetSpellCastingLevel(5);
 
             CastSpellPaladin.SlotsPerLevels.Clear();
-            CastSpellPaladin.SlotsPerLevels.AddRange(Common.HalfCastingSlots);
+            CastSpellPaladin.SlotsPerLevels.AddRange(SpellsHelper.HalfCastingSlots);
 
             CastSpellPaladin.ReplacedSpells.Clear();
-            CastSpellPaladin.ReplacedSpells.AddRange(Common.EmptyReplacedSpells);
+            CastSpellPaladin.ReplacedSpells.AddRange(SpellsHelper.EmptyReplacedSpells);
         }
     }
 }

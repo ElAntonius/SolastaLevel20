@@ -12,6 +12,7 @@ namespace SolastaLevel20
         public const int MOD_MIN_LEVEL = 1;
         public const int MOD_MAX_LEVEL = 20;
         public const int GAME_MAX_LEVEL = 13;
-        public const int MAX_CHARACTER_EXPERIENCE = 1000000;
+        public const int MAX_CHARACTER_EXPERIENCE = 355000;
+        public const int MAX_SPELL_LEVEL = 9;
     }
 }

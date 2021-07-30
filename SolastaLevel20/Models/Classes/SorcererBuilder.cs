@@ -4,7 +4,6 @@ using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionPointPools;
-using static SolastaModApi.DatabaseHelper.SpellListDefinitions;
 
 namespace SolastaLevel20.Models.Classes
 {
@@ -45,26 +44,16 @@ namespace SolastaLevel20.Models.Classes
                 // TODO: Sorcerous Restoration
             });
 
-            var maxSpellLevel = 9;
-            var accountForCantrips = SpellListSorcerer.HasCantrips ? 1 : 0;
-
-            SpellListSorcerer.SetMaxSpellLevel(maxSpellLevel);
-
-            while (SpellListSorcerer.SpellsByLevel.Count < maxSpellLevel + accountForCantrips)
-            {
-                SpellListSorcerer.SpellsByLevel.Add(new SpellListDefinition.SpellsByLevelDuplet() { Level = SpellListSorcerer.SpellsByLevel.Count + 1, Spells = new List<SpellDefinition>() });
-            }
-
-            CastSpellSorcerer.SetSpellCastingLevel(-1);
+            CastSpellSorcerer.SetSpellCastingLevel(9);
 
             CastSpellSorcerer.SlotsPerLevels.Clear();
-            CastSpellSorcerer.SlotsPerLevels.AddRange(Common.FullCastingSlots);
+            CastSpellSorcerer.SlotsPerLevels.AddRange(SpellsHelper.FullCastingSlots);
 
             CastSpellSorcerer.KnownSpells.Clear();
             CastSpellSorcerer.KnownSpells.AddRange(KnownSpells);
 
             CastSpellSorcerer.ReplacedSpells.Clear();
-            CastSpellSorcerer.ReplacedSpells.AddRange(Common.FullCasterReplacedSpells);
+            CastSpellSorcerer.ReplacedSpells.AddRange(SpellsHelper.FullCasterReplacedSpells);
         }
     }
 }

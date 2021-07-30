@@ -5,6 +5,7 @@ using static SolastaLevel20.Settings;
 
 namespace SolastaLevel20.Patches
 {
+    // allows custom dungeons to be set for parties up to level 20
     class UserLocationSettingsModalPatcher
     {
         [HarmonyPatch(typeof(UserLocationSettingsModal), "OnMinLevelEndEdit")]

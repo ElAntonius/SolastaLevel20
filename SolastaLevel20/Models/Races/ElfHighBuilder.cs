@@ -7,7 +7,7 @@ namespace SolastaLevel20.Models.Classes
         internal static void Load()
         {
             CastSpellElfHigh.ReplacedSpells.Clear();
-            CastSpellElfHigh.ReplacedSpells.AddRange(Common.EmptyReplacedSpells);
+            CastSpellElfHigh.ReplacedSpells.AddRange(SpellsHelper.EmptyReplacedSpells);
         }
     }
 }

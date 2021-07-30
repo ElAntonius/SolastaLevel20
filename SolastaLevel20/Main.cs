@@ -28,11 +28,11 @@ namespace SolastaLevel20
                 var assembly = Assembly.GetExecutingAssembly();
 
                 Logger = modEntry.Logger;
-
                 Mod = new ModManager<Core, Settings>();
                 Mod.Enable(modEntry, assembly);
                 Menu = new MenuManager();
                 Menu.Enable(modEntry, assembly);
+                Translations.Load(MOD_FOLDER);
             }
             catch (Exception ex)
             {

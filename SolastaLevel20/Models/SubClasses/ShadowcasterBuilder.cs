@@ -7,13 +7,13 @@ namespace SolastaLevel20.Models.Classes
     {
         internal static void Load()
         {
-            CastSpellShadowcaster.SetSpellCastingLevel(-1);
+            CastSpellShadowcaster.SetSpellCastingLevel(4);
 
             CastSpellShadowcaster.ReplacedSpells.Clear();
-            CastSpellShadowcaster.ReplacedSpells.AddRange(Common.OneThirdCasterReplacedSpells);
+            CastSpellShadowcaster.ReplacedSpells.AddRange(SpellsHelper.OneThirdCasterReplacedSpells);
 
             CastSpellShadowcaster.SlotsPerLevels.Clear();
-            CastSpellShadowcaster.SlotsPerLevels.AddRange(Common.OneThirdCastingSlots);
+            CastSpellShadowcaster.SlotsPerLevels.AddRange(SpellsHelper.OneThirdCastingSlots);
         }
     }
 }

@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 namespace SolastaLevel20.Patches
 {
+    // unhides features for levels above 10
     class HigherLevelFeaturesModalPatcher
     {
         [HarmonyPatch(typeof(HigherLevelFeaturesModal), "Bind")]
         internal static class HigherLevelFeaturesModal_Bind_Patch
         {
-            internal static void Postfix(
+            internal static bool Prefix(
                 HigherLevelFeaturesModal __instance, 
                 List<FeatureUnlockByLevel> featureUnlocks, 
                 int achievementLevel,
@@ -18,6 +19,9 @@ namespace SolastaLevel20.Patches
                 RectTransform ___featuresTable,
                 List<FeatureUnlockByLevel> ___visibleFeatures)
             {
+                if (__instance == null)
+                    return true;
+
                 ___visibleFeatures.Clear();
                 foreach (FeatureUnlockByLevel featureUnlock in featureUnlocks)
                 {
@@ -53,6 +57,7 @@ namespace SolastaLevel20.Patches
                     }
                 }
                 LayoutRebuilder.ForceRebuildLayoutImmediate(___featuresTable);
+                return false;
             }
         }
     }
