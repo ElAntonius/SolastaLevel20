@@ -6,7 +6,7 @@ namespace SolastaLevel20.Models.Classes
     {
         internal static void Load()
         {
-            DatabaseRepository.GetDatabase<FeatureDefinitionCastSpell>().TryGetElement("BardClassSpellcasting", out FeatureDefinitionCastSpell featureDefinitionCastSpell);
+            DatabaseRepository.GetDatabase<FeatureDefinitionCastSpell>().TryGetElement("CastSpellTinkerer", out FeatureDefinitionCastSpell featureDefinitionCastSpell);
 
             if (featureDefinitionCastSpell != null)
             {
