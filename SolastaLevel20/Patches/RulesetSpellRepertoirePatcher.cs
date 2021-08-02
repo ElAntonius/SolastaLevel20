@@ -10,7 +10,15 @@ namespace SolastaLevel20.Patches
         {
             internal static void Postfix(RulesetSpellRepertoire __instance, ref int __result)
             {
-                if (__instance.SpellCastingFeature != null)
+                // handles level 20 unique case when MC not installed
+                if (__instance?.SpellCastingClass?.Name.Contains("WarlockClass") == true)
+                {
+                    if (__instance.SpellCastingLevel == 20) 
+                    {
+                        __result = 5;
+                    }
+                }
+                else if (__instance?.SpellCastingFeature != null)
                 {
                     FeatureDefinitionCastSpell.SlotsByLevelDuplet slotsPerLevel = __instance.SpellCastingFeature.SlotsPerLevels[__instance.SpellCastingLevel - 1];
 
