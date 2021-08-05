@@ -25,8 +25,8 @@ namespace SolastaLevel20.Patches
                 ___visibleFeatures.Clear();
                 foreach (FeatureUnlockByLevel featureUnlock in featureUnlocks)
                 {
-                    //if (!featureUnlock.FeatureDefinition.GuiPresentation.Hidden && featureUnlock.Level > achievementLevel)
-                    if (featureUnlock.Level > achievementLevel)
+                    //if (!featureUnlock.FeatureDefinition.GuiPresentation.Hidden && featureUnlock.Level > achievementLevel && featureUnlock.Level <= 10)
+                    if (!featureUnlock.FeatureDefinition.GuiPresentation.Hidden && featureUnlock.Level > achievementLevel)
                         ___visibleFeatures.Add(featureUnlock);
                 }
                 while (___featuresTable.childCount < ___visibleFeatures.Count)
