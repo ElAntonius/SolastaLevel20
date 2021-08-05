@@ -15,6 +15,7 @@ namespace SolastaLevel20.Patches
 
                 BardBuilder.Load();
                 ClericBuilder.Load();
+                DruidBuilder.Load();
                 FighterBuilder.Load();
                 PaladinBuilder.Load();
                 RangerBuilder.Load();

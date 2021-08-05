@@ -65,6 +65,7 @@ namespace SolastaLevel20.Models
             "BardClassSpelllist",
             "BardNatureSubclassBonusCantripSpelllist",
             "BardNatureSubclassEnvironmentalMagicalSecretsSpelllist",
+            "DruidSpellList",
             "SpellListCleric",
             "SpellListPaladin",
             "SpellListRanger",
