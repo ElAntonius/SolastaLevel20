@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using System;
 
 namespace SolastaLevel20.Patches
 {
@@ -12,9 +13,9 @@ namespace SolastaLevel20.Patches
             {
                 var spellCastingLevel = __instance.SpellCastingLevel;
 
-                if (__instance?.SpellCastingClass?.Name.Contains("WarlockClass") == true && spellCastingLevel == 20)
+                if (__instance?.SpellCastingClass?.Name.Contains("WarlockClass") == true)
                 {
-                   __result = 5;
+                    __result = (int)Math.Floor((Math.Min(spellCastingLevel, 10) + 1) / 2.0);
                 }
                 else if (__instance?.SpellCastingFeature != null)
                 {
