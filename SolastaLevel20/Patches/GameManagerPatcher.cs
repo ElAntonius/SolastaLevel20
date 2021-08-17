@@ -12,7 +12,9 @@ namespace SolastaLevel20.Patches
             internal static void Postfix()
             {
                 ElfHighBuilder.Load();
+                WoodlandGnomeBuilder.Load();
 
+                AlchemistBuilder.Load();
                 BardBuilder.Load();
                 ClericBuilder.Load();
                 DruidBuilder.Load();
