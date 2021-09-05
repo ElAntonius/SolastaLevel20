@@ -4,6 +4,7 @@ using static SolastaModApi.DatabaseHelper.CharacterClassDefinitions;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionCastSpells;
 using static SolastaModApi.DatabaseHelper.FeatureDefinitionFeatureSets;
 using static SolastaLevel20.Models.Features.ActionAffinityRangerVanishActionBuilder;
+using static SolastaLevel20.Models.Features.FeatureSetRangerFoeSlayerBuilder;
 
 namespace SolastaLevel20.Models.Classes
 {
@@ -17,7 +18,7 @@ namespace SolastaLevel20.Models.Classes
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 16),
                 // TODO 18: Feral Senses
                 new FeatureUnlockByLevel(FeatureSetAbilityScoreChoice, 19),
-                // TODO 20: Foe Slayer
+                new FeatureUnlockByLevel(FeatureSetRangerFoeSlayer, 20)
             });
 
             CastSpellRanger.SetSpellCastingLevel(5);
