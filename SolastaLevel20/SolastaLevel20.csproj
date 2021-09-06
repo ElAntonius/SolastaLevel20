@@ -56,9 +56,10 @@
 			<Private>false</Private>
 		</Reference>
 		<Reference Include="SolastaModHelpers">
-		  <HintPath>..\..\..\Games\Steam\steamapps\common\Slasta_COTM\Mods\SolastaModHelpers\SolastaModHelpers.dll</HintPath>
+			<HintPath>$([System.IO.Path]::Combine($(SolastaInstallDir), 'Mods\SolastaModApi\SolastaModHelpers.dll'))</HintPath>
+			<Private>false</Private>
 		</Reference>
-    	<Reference Include="Unity.Addressables">
+    	        <Reference Include="Unity.Addressables">
 			<HintPath>$([System.IO.Path]::Combine($(SolastaInstallDir), 'Solasta_Data\Managed\Unity.Addressables.dll'))</HintPath>
 			<Private>false</Private>
 		</Reference>
